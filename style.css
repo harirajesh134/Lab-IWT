@@ -1,0 +1,251 @@
+.navbar{
+    height: 8vh;
+    width: auto;
+    display: flex;
+    border: 2px solid black;
+    justify-content: space-between;
+    background:linear-gradient(to left, rgb(215, 129, 129), rgb(130, 190, 249), rgb(252, 131, 131));
+}
+
+.left-nav{
+   padding-left: 0;
+   display: flex;
+   width: 30%;
+   justify-content: space-between;
+}
+
+.right-nav{
+    padding-right: 1.5%;
+    padding-left: 0%;
+    display: flex;
+    width: 13%;
+    justify-content: space-between;
+}
+
+.logo{
+    max-width: 100%;
+    height: auto;
+}
+.a1{
+    text-decoration: none;
+    color: black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.a1:hover {
+    color: rgb(47, 6, 227);
+  }
+.main-content{
+    border:1px solid red;
+    height: 100vh;
+    display: flex;
+    background-image: url('class-img.jpg');
+    background-size:cover;
+}
+.desc-box{
+    border: 2px solid;
+    height: 60%;
+    width: 40%;
+    backdrop-filter: blur(6px);
+    box-shadow: 0px 10px 10px white;
+    border-radius: 8%;
+}
+
+.divi-1{
+    margin-top: 7%;
+    display: flex;
+    height: 80%;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.What-we-do{
+    margin-top: 10%;
+}
+
+
+.how-text{
+    margin-left: 5%;
+    margin-top: 3%;
+    font-size: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+}
+
+.how-para{
+    font-size: 18px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align:left;
+    margin:7% 8%;
+}
+
+@media only screen and (max-width:860px) {
+    .desc-box{
+        height: 100%;
+    }
+}
+
+
+
+/* 
+
+/* .navbar {
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to left, rgb(215, 129, 129), rgb(130, 190, 249), rgb(252, 131, 131));
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.left-nav, .right-nav {
+    display: flex;
+    align-items: center;
+}
+
+.left-nav {
+    padding-left: 0;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.right-nav {
+    padding-right: 1.5%;
+    padding-left: 0;
+    width: 13%;
+    justify-content: space-between;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.a1 {
+    text-decoration: none;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.a1:hover {
+    color: rgb(47, 6, 227);
+}
+
+.main-content {
+    border: 1px solid red;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('class-img.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.desc-box {
+    border: 2px solid;
+    height: 60%;
+    width: 40%;
+    backdrop-filter: blur(6px);
+    box-shadow: 0px 10px 10px #4FB0A7;
+    border-radius: 8%;
+    margin: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.divi-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.What-we-do {
+    margin-top: 10%;
+}
+
+.how-it-works {
+}
+
+.how-text {
+    margin-left: 5%;
+    margin-top: 3%;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+}
+
+.how-para {
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    margin: 7% 8%;
+}
+
+@media (max-width: 1024px) {
+    .left-nav, .right-nav {
+        width: 40%;
+    }
+
+    .desc-box {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-nav, .right-nav {
+        width: 100%;
+        justify-content: center;
+        padding: 0.5rem 0;
+    }
+
+    .left-nav a, .right-nav a {
+        margin: 0 1rem;
+    }
+
+    .desc-box {
+        width: 80%;
+    }
+
+    .how-text {
+        font-size: 24px;
+    }
+
+    .how-para {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        height: auto;
+    }
+
+    .left-nav, .right-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .desc-box {
+        width: 100%;
+    }
+
+    .how-text {
+        font-size: 20px;
+    }
+
+    .how-para {
+        font-size: 14px;
+    } 
+}
+*/ 
