@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Sign Up Form</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul class="left-nav">
+            <a class="a1" href="https://www.google.com/">Home</a>
+        </ul>
+        <ul class="right-nav">
+            <img src="images-removebg-preview.png" alt="Logo">
+        </ul>
+    </div>
+     
+    <div class="des1"></div>
+    <div class="tos">
+        <div class="sign">
+            <h1>Sign Up</h1>
+            <div class="form1">
+                <form id="signUpForm" class="sign1" action="/signup" method="POST" onsubmit="return validateForm()">
+                    <input type="text" id="name" name="name" placeholder="username" required>
+                    <span id="nameError" class="error"></span>
+                    <br><br>
+                    <input type="email" id="email" name="email" placeholder="email" required>
+                    <span id="emailError" class="error"></span>
+                    <br><br>
+                    <input type="number" id="mob-number" name="mob-number" placeholder="number" required><br><br>
+                    <input type="password" id="password" name="password" placeholder="password" required>
+                    <span id="passwordError" class="error"></span>
+                    <br><br>
+                    <input type="password" id="confpassword" name="confpassword" placeholder="confirm password" required>
+                    <span id="confPasswordError" class="error"></span>
+                    <br><br>
+                    <input type="text" id="city" name="city" placeholder="city" required><br><br>
+                </form>
+                <form class="sign2">
+                    <input type="text" id="cname" placeholder="College Name" required><br><br>
+                    <input type="text" id="department" placeholder="Department" required><br><br>
+                    <input type="number" id="year" placeholder="Year" required><br><br>
+                    <label for="">Joining Date</label>
+                    <input type="date" id="jdate" placeholder="Joining Date" required><br><br>
+                    <label for="">Ending Date</label>
+                    <input type="date" id="edate" placeholder="Ending Date" required><br><br>
+                    <input type="text" id="mentor" placeholder="Mentor" required><br><br>
+                </form>
+            </div>
+            <div class="submit">
+                <input type="submit" value="Submit">
+            </div> 
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("name").addEventListener("input", validateName);
+        document.getElementById("email").addEventListener("input", validateEmail);
+        document.getElementById("password").addEventListener("input", validatePassword);
+        document.getElementById("confpassword").addEventListener("input", validateConfPassword);
+
+        function validateName() {
+            var name = document.getElementById("name").value;
+            var namePattern = /^[A-Za-z\s]+$/;
+            var nameError = document.getElementById("nameError");
+            if (!namePattern.test(name)) {
+                nameError.textContent = "Name should only contain letters and spaces.";
+            } else {
+                nameError.textContent = "";
+            }
+        }
+
+        function validateEmail() {
+            var email = document.getElementById("email").value;
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var emailError = document.getElementById("emailError");
+            if (!emailPattern.test(email)) {
+                emailError.textContent = "Please enter a valid email address.";
+            } else {
+                emailError.textContent = "";
+            }
+        }
+
+        function validatePassword() {
+            var password = document.getElementById("password").value;
+            var passwordError = document.getElementById("passwordError");
+            if (password.length < 8) {
+                passwordError.textContent = "Password must be at least 8 characters long.";
+            } else {
+                passwordError.textContent = "";
+            }
+        }
+
+        function validateConfPassword() {
+            var password = document.getElementById("password").value;
+            var confPassword = document.getElementById("confpassword").value;
+            var confPasswordError = document.getElementById("confPasswordError");
+            if (password !== confPassword) {
+                confPasswordError.textContent = "Passwords do not match.";
+            } else {
+                confPasswordError.textContent = "";
+            }
+        }
+
+        function validateForm() {
+            validateName();
+            validateEmail();
+            validatePassword();
+            validateConfPassword();
+            var errors = document.querySelectorAll(".error");
+            for (var i = 0; i < errors.length; i++) {
+                if (errors[i].textContent !== "") {
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

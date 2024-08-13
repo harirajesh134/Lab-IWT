@@ -1,0 +1,145 @@
+*{
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 1024px) {
+    .left-nav, .right-nav {
+        width: 40%;
+    }
+
+    .desc-box {
+        width: 45%;
+    }
+}
+
+.navbar{
+    margin-top: -675px;
+    z-index: 1000;
+    position: fixed;
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    background:linear-gradient(to right,black, grey, grey);
+}
+
+
+.left-nav {
+    padding-left: 0;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.right-nav {
+    padding-right: 1.5%;
+    padding-left: 0;
+    width: 13%;
+    justify-content: space-between;
+}
+
+
+.left-nav, .right-nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.a1 {
+    text-decoration: none;
+   color:white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.a1:hover {
+    color: rgb(47, 6, 227);
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(class-img.jpg);
+    background-size: cover;
+}
+
+.login {
+    padding: 20px 40px; 
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px #4fb0a7;
+    text-align: center;
+    width: 300px;
+    
+    backdrop-filter: blur(6px);
+}
+
+.sign h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login input[type="text"],
+.login input[type="password"]
+ {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus{
+    border-color: #007bff;
+    outline: none;
+}
+
+.submit {
+    margin-top: 20px;
+}
+
+.submit input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.forg{
+    display: flex;
+    justify-content: space-between;
+    border: 5px soliid red;
+    text-decoration: none;
+    color: rgb(214, 214, 64);
+    margin: 7px;
+}
+a {
+    color: #ebaf22;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#00A0C6; 
+    text-decoration:none; 
+    cursor:pointer;  
+}
